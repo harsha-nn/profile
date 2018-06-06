@@ -5,10 +5,11 @@ import Navigation from './components/Navigation';
 import '@material-ui/core';
 import { Button } from '@material-ui/core';
 import Port from './components/Port';
-import Db from './components/Db';
+import Db from './components/DB/Db';
 import About from './components/About';
 import Contact from './components/Contact';
-import Sw from './components/Sw';
+import Sw from './components/Sw/Sw';
+import Home from './components/Home';
 
 class App extends Component {
   constructor(){
@@ -44,11 +45,9 @@ class App extends Component {
         <header>
           <Navigation onRouteChange={this.onRouteChange}/>         
         </header>
-        { this.state.route !== 'home'? this.loadPage(this.state.route)
-          :<p >
-              <Button variant="contained" color="primary" />
-              This is Body
-           </p> 
+          { this.state.route !== 'home'
+          ? this.loadPage(this.state.route)
+          :<Home />
           }        
       </div>
     );
