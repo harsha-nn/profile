@@ -8,6 +8,7 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-scripts": "1.1.4",
+    "react-svg": "^4.0.13",
     "tachyons": "^4.10.0"
   },
   "scripts": {
